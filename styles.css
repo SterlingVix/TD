@@ -1,0 +1,123 @@
+/**
+ * Apply a natural box layout model to all elements
+ * while allowing components to change.
+ *
+ * Flexbox settings to keep all flexbox content
+ * clumped in the middle of the display area.
+ **/
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+.flex-container {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row nowrap;
+    flex-flow: row wrap;
+    -webkit-justify-content: center;
+    justify-content: center;
+    /*
+    -webkit-justify-content: flex-start;
+    justify-content: flex-start;
+    -webkit-justify-content: flex-end;
+    justify-content: flex-end;
+*/
+    align-items: center;
+    /*
+    align-items: flex-start;
+    align-items: flex-end;
+*/
+}
+
+.flex-container * {
+    -webkit-flex: initial;
+    flex: initial;
+}
+
+*:before,
+*:after {
+    display: inherit;
+    -webkit-flex-flow: inherit;
+    flex-flow: inherit;
+    -webkit-justify-content: inherit;
+    justify-content: inherit;
+    align-items: inherit;
+    -webkit-flex: initial;
+    flex: initial;
+}
+
+
+/**
+ * Top-level layout elements
+ **/
+
+section.game-elements {
+    display: inline-block;
+    height: auto;
+    width: auto;
+    margin: 0 auto;
+    left: 0;
+    top: 0;
+    /*    position: relative;*/
+}
+
+header.game-header,
+nav.bottom-nav {
+    flex: 0 1 auto;
+    align-self: center;
+    -webkit-justify-content: space-around;
+    justify-content: space-around;
+    height: 40px;
+}
+
+div.stage {
+    width: 800px;
+    height: 600px;
+    border: solid black 2px;
+    position: relative;
+    background-color: #1a1a1a;
+    background-size: 31px 31px;
+    background-image: linear-gradient(to right, green 1px, transparent 1px), linear-gradient(to bottom, green 1px, transparent 1px);
+
+}
+
+nav.right-nav {
+    /*    display: inline-block;*/
+    min-width: 10%;
+    max-width: 15%;
+    right: 0px;
+    top: 0px;
+    position: absolute;
+    height: 100%;
+    -webkit-flex: 1 0 auto;
+    flex: 1 0 auto;
+    -webkit-flex-flow: column nowrap;
+    flex-flow: column nowrap;
+    -webkit-justify-content: space-around;
+    justify-content: space-around;
+    background-color: rgba(15, 23, 124, 0.54);
+}
+
+.button-container {
+    padding: 1em;
+}
+
+
+/**
+ * Elements within the top-level layout elements
+ **/
+
+div.stage * {}
+
+.stage .box {}
+
+header button {}
+
+nav button {}

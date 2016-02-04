@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <title>TD</title>
+    <meta name="Description" content="TD">
+    <meta charset="UTF-8">
+    <link href="styles.css" rel="stylesheet">
+    <link href="towers.css" rel="stylesheet">
+    <link href="creeps.css" rel="stylesheet">
+    <script src="Game.js"></script>
+</head>
+
+<body>
+    <!-- inside elements -->
+    <section class="game-elements">
+        <header class="game-header flex-container button-container">
+            <button>header1</button>
+            <button>header2</button>
+            <button>header3</button>
+            <button>header4</button>
+        </header>
+        <div class="stage">
+            <nav class="right-nav flex-container button-container">
+                <button>right-nav1</button>
+                <button>right-nav2</button>
+                <button>right-nav3</button>
+                <button>right-nav4</button>
+            </nav>
+            <div class="creep"></div>
+
+            <div class="tower flex-container" data-radius="2">
+                <div class="tower-center flex-item"></div>
+                <div class="tower-radius"></div>
+            </div>
+
+            <div class="tower flex-container" data-radius="1">
+                <div class="tower-center flex-item"></div>
+                <div class="tower-radius"></div>
+            </div>
+
+            <div class="tower flex-container" data-radius="4">
+                <div class="tower-center flex-item"></div>
+                <div class="tower-radius"></div>
+            </div>
+
+        </div>
+        <nav class="bottom-nav flex-container button-container">
+            <button>bottom-nav1</button>
+            <button>bottom-nav2</button>
+            <button>bottom-nav3</button>
+            <button>bottom-nav4</button>
+        </nav>
+    </section>
+
+    <!-- game elements -->
+
+</body>
+<script>
+    var game = new Game();
+</script>
+
+</html>

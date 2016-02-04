@@ -1,0 +1,8 @@
+div.creep {
+    border-radius: 100%;
+    background-color: #ff6464;
+    z-index: 9;
+    width: 1em;
+    height: 1em;
+    position: absolute;
+}
